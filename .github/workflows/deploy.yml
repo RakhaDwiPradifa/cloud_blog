@@ -25,4 +25,5 @@ jobs:
             git pull origin main
             sudo cp index.html /usr/share/nginx/html/index.html
             sudo systemctl restart nginx
+            aws s3 cp /usr/share/nginx/html/index.html s3://bucketospiris
           EOF
